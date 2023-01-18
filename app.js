@@ -1,3 +1,5 @@
+import { renderEnemy } from './utilities.js';
+
 const enemiesEl = document.getElementById('enemies');
 const starterHPEl = document.getElementById('starter-hp');
 const starterImgEl = document.getElementById('starter-img');
