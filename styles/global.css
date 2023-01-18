@@ -7,7 +7,8 @@
 
 body {
     font-family: var(--primary-font);
-    background: var(--background);
+    background: url(../assets/battle-background.png);
+    background-size: cover;
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -32,4 +33,22 @@ header .logo {
 
 main {
     padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.starter-container {
+    color: white;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 1px;
+    margin-left: 70px;
+    height: 300px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.starter-img {
+    width: 200px;
 }
