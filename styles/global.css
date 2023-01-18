@@ -54,6 +54,15 @@ main {
     transition: transform 1s ease-in-out;
 }
 
-.faint {
+.enemies {
+    color: white;
+    text-align: center;
+}
+
+.enemies img {
+    width: 300px;
+}
+
+.fainted-starter {
     transform: rotate(-90deg);
 }
