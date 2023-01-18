@@ -51,4 +51,9 @@ main {
 
 .starter-img {
     width: 200px;
+    transition: transform 1s ease-in-out;
+}
+
+.faint {
+    transform: rotate(-90deg);
 }
