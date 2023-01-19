@@ -1,5 +1,5 @@
-export function renderEnemy(dataEnemy) {
-    const newEnemyEl = document.createElement('li');
+export function renderEnemy(dataEnemy, playerHP) {
+    const newEnemyEl = document.createElement('button');
     const nameEl = document.createElement('p');
     const enemyImgEl = document.createElement('img');
     const hpEl = document.createElement('p');
@@ -14,6 +14,8 @@ export function renderEnemy(dataEnemy) {
         enemyImgEl.src = './assets/enemy-gastly.png';
         enemyImgEl.classList.add('fainted-enemy');
     }
+
+    if (playerHP <= 0) newEnemyEl.disabled = true;
 
     newEnemyEl.classList.add('Enemy');
 
