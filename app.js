@@ -8,7 +8,7 @@ const buttonEl = document.getElementById('enemy-button');
 const winsCountEl = document.getElementById('wins-count');
 
 let winsCount = 0;
-let starterHp = 1;
+let starterHp = 10;
 const enemies = [
     {
         name: 'Steve',
@@ -23,12 +23,8 @@ const enemies = [
 buttonEl.addEventListener('click', () => {
     const enemyName = inputEl.value;
 
-    if (!enemyName) {
-        return;
-    }
-
     const newEnemy = {
-        name: enemyName,
+        name: enemyName || `Gastly #${Math.ceil(Math.random() * 100)}`,
         hp: Math.ceil(Math.random() * 6),
     };
 
@@ -46,8 +42,6 @@ function disableButton() {
         button.classList.add('disable');
     }
 }
-
-function handler(e) {}
 
 function displayEnemies() {
     enemiesEl.textContent = '';

@@ -137,3 +137,13 @@ main {
 .disable {
     pointer-events: none;
 }
+
+.enemies button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #ffcb05;
+    text-shadow: -1px 5px 0 #3c5aa6, 1px 2px 0 #3c5aa6, 1px -1px 0 #3c5aa6, -1px -1px 0 #3c5aa6;
+    display: flex;
+    padding-right: 30px;
+}
