@@ -1,13 +1,14 @@
 :root {
     --background: rgb(224, 234, 247);
-    --header-background: rgb(254, 251, 245);
+    --header-background: rgb(206, 194, 170);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
 }
 
 body {
     font-family: var(--primary-font);
-    background: var(--background);
+    background: url(../assets/battle-background.png);
+    background-size: cover;
     display: grid;
     grid-template-rows: auto 1fr;
 }
@@ -17,13 +18,15 @@ header {
     top: 0;
     padding: 15px;
     height: 80px;
-
+    font-size: 2rem;
     display: flex;
     align-items: center;
     gap: 10px;
-
     background-color: var(--header-background);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #ffcb05;
+    text-shadow: -1px 5px 0 #3c5aa6, 1px 2px 0 #3c5aa6, 1px -1px 0 #3c5aa6, -1px -1px 0 #3c5aa6;
 }
 
 header .logo {
@@ -32,4 +35,115 @@ header .logo {
 
 main {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.starter-container {
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #ffcb05;
+    text-shadow: -1px 5px 0 #3c5aa6, 1px 2px 0 #3c5aa6, 1px -1px 0 #3c5aa6, -1px -1px 0 #3c5aa6;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 1px;
+    margin-left: 70px;
+    height: 400px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.starter-img {
+    width: 200px;
+    transition: all 2s ease-in-out;
+}
+
+.add-enemy-container input {
+    color: white;
+    width: 300px;
+    background-color: transparent;
+    text-align: center;
+    height: 2rem;
+    border: solid 5px rgb(110, 37, 33);
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-left: -200px;
+    position: fixed;
+    top: 0;
+}
+
+.add-enemy-container button {
+    border-radius: 10px;
+    margin-top: 105px;
+    margin-left: 80px;
+    position: fixed;
+    top: 0;
+}
+
+.add-enemy-container button:hover {
+    cursor: pointer;
+}
+
+.enemy-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.enemies {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 1px;
+    margin-right: 70px;
+    height: 480px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.enemies img:hover {
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    transform: rotate(3deg);
+    background-color: transparent;
+}
+
+.enemies img {
+    width: 250px;
+    transition: rotate 2s ease-in-out;
+    transition: grayscale 2s ease-in-out;
+}
+
+.fainted-starter {
+    transform: rotate(-90deg);
+    filter: grayscale(100%);
+}
+
+.fainted-enemy {
+    transform: rotate(90deg);
+    filter: grayscale(100%);
+}
+
+.disable {
+    pointer-events: none;
+}
+
+.enemies button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #ffcb05;
+    text-shadow: -1px 5px 0 #3c5aa6, 1px 2px 0 #3c5aa6, 1px -1px 0 #3c5aa6, -1px -1px 0 #3c5aa6;
+    display: flex;
+    padding-right: 30px;
 }
